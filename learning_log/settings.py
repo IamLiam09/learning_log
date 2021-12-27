@@ -140,6 +140,6 @@ import django_heroku
 django_heroku.settings(locals())
 
 if os.environ.get('DEGUG') == 'TRUE':
-    DEGUB == True
+    DEGUB = True
 elif os.environ.get('DEGUB') == 'FALSE':
-    DEGUB == False
+    DEGUB = False
