@@ -138,3 +138,8 @@ LOGIN_URL = 'users:login'
 # Heroku settings.
 import django_heroku
 django_heroku.settings(locals())
+
+if os.environ.get('DEGUG') == 'True':
+    DEGUB == True
+elif os.environ.get('DEGUB') == 'False':
+    DEGUB == False
