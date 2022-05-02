@@ -7,6 +7,12 @@
     <form method="post" action="{% url 'learning_logs:new_topic' %}" class="form">
         {% csrf_token %} 
         {% bootstrap_form form %}
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" value="True" id="public" />
+            <label class="form-check-label">
+                Make it public?
+            </label>
+        </div>
         {% buttons %}
             <button name="submit" class="btn btn-primary">Add topic</button>
         {% endbuttons %}

@@ -6,6 +6,7 @@ class Topic(models.Model):
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    public = models.BooleanField(default=False)
     def __str__(self):
         """return a string representation of the model"""
         return self.text
@@ -23,3 +24,4 @@ class Entry(models.Model):
             return f"{self.text[:50]}..."
         else:
             return self.text
+            
